@@ -9,7 +9,7 @@ class Solution {
     // sort tuples by count descending
     // return array from slicing sorted array from index 0 thru k
     // time complexity -- O(n log n)
-    // space complexity -- O(n) (technically O(m*n), where m is num new objects created)
+    // space complexity -- O(n)
     const counts = {};
     for (let num of nums) {
       counts[num] = (counts[num] || 0) + 1
@@ -25,6 +25,8 @@ class Solution {
     // build a count map which holds the numbers of nums and a count of each number
     // from that map, create a frequency array. Each index of frequency array holds the number that appears that many times
     // iterate backwards through frequency array. As soon as we've picked k items, return
+    // time complexity -- O(n)
+    // space complexity -- O(n)
 
     const counts = {};
     const frequency = Array.from({ length: nums.length + 1 }, () => []);
